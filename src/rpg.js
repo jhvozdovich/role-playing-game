@@ -2,7 +2,7 @@ export function Character(userName, userClass, userPower) {
   this.name = userName;
   this.class = userClass;
   this.inventory = [];
-  this.power = [userPower];
+  this.powersArray = [userPower];
   this.experience = 0;
   this.level = 1;
   this.strength = 5;
@@ -29,6 +29,14 @@ Character.prototype.attackEnemyPower = function(enemy, power) {
   } else {
     enemy.health -= (power.damage + this.strength);
   } 
+};
+
+Character.prototype.addPower = function(power) {
+  if (this.powersArray.length <= 3) {
+    this.powersArray.push(power);
+  } else {
+    console.log("You can not have unlimited powers");
+  }
 };
 
 
