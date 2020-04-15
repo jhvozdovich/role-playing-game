@@ -18,7 +18,7 @@ Character.prototype.pickUpItem = function(item) {
 
 
 Character.prototype.attackEnemyWeapon = function(enemy, item) { 
-  if (item.effect === "damage") {
+  if (item.effect === "damage" && this.inventory.includes(item)) {
     enemy.health -= (item.strength + this.strength);
   }
 };
