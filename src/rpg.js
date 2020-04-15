@@ -45,9 +45,9 @@ export function Power(namePower, damagePower, damageType) {
 }
 
 export function Enemy(enemyName, enemyHealth, enemyWeakness) {
-  // this.name = enemyName;
-  // this.health = enemyHealth;
-  // this.weakness = enemyWeakness;
+  this.name = enemyName;
+  this.health = enemyHealth;
+  this.weakness = enemyWeakness;
 }
 
 
