@@ -24,27 +24,14 @@ describe ("Pick Up Item", () => {
 describe ("Attack Enemy - Weapon", () => {
   test("should reduce health of enemy with the character's strength plus the weapon's damage", () => {
     let jessica = new Character ("Jessica", "Wizard", "Magic Missle");
-    let sword = new Item ("Sword", "Damage", 5);
+    let sword = new Item ("sword", "damage", 5);
     let goblin = new Enemy("goblin", 11, "fire");
+    jessica.pickUpItem(sword);
     jessica.attackEnemyWeapon(goblin, sword);
     expect(goblin.health).toEqual(1);
   });
 });
 
-
-// Character.prototype.attackEnemyWeapon = function(enemy, item) { 
-//   if (item.effect === "damage") {
-//     enemy.health -= (item.strength + this.strength);
-//   }
-// };
-
-// Character.prototype.attackEnemyPower = function(enemy, power) { 
-//   if(enemy.weakness === power.type) {
-//     enemy.health -= ((power.strength * 2) + this.strength);
-//   } else {
-//     enemy.health -= (power.strength + this.strength);
-//   } 
-// };
 
 describe('Item', () => {
   test('should create an item object with name and effect', () => {
