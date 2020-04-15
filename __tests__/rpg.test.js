@@ -19,10 +19,10 @@ describe('Item', () => {
   }); 
 });
   
-// decribe('Power', () => {
-//   test('should create a power object with name and damage', () => {
-//     let power = new Power("Magic Missle", 5);
-//     expect(power.name).toEqual("Magic Missle");
-//     expect(power.effect).toEqual(5);
-//   });
-// });
+describe('Power', () => {
+  test('should create a power object with name and damage', () => {
+    let power = new Power("Magic Missle", 5);
+    expect(power.name).toEqual("Magic Missle");
+    expect(power.effect).toEqual(5);
+  });
+});

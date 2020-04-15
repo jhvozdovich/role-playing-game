@@ -12,10 +12,10 @@ export function Item(itemName, itemEffect) {
   this.effect = itemEffect;
 }
 
-// export function Power(namePower, damagePower) {
-//   this.name = namePower;
-//   this.damage = damagePower;
-// }
+export function Power(namePower, damagePower) {
+  // this.name = namePower;
+  // this.damage = damagePower;
+}
 
 
 
