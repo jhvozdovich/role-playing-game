@@ -63,8 +63,8 @@ describe ("Attack Enemy - Weapon", () => {
 describe('attachEnemyPower', () => {
   test("should reduce health of enemy with the character's strengh plus the powers strenght", () => {
     let joseph = new Character("Joseph", "Jester", "Jest");
-    let fireball = new Power ("fireball", 2, "scorch")
-    let king = new Enemy ("king", 10, "insurrection")
+    let fireball = new Power ("fireball", 2, "scorch");
+    let king = new Enemy ("king", 10, "insurrection");
     joseph.attackEnemyPower(king, fireball);
     expect(king.health).toEqual(3);
   });
