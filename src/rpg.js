@@ -24,11 +24,11 @@ Character.prototype.attackEnemyWeapon = function(enemy, item) {
 };
 
 Character.prototype.attackEnemyPower = function(enemy, power) { 
-  // if(enemy.weakness === power.type) {
-  //   enemy.health -= ((power.damage * 2) + this.strength);
-  // } else {
-  //   enemy.health -= (power.damage + this.strength);
-  // } 
+  if(enemy.weakness === power.type) {
+    enemy.health -= ((power.damage * 2) + this.strength);
+  } else {
+    enemy.health -= (power.damage + this.strength);
+  } 
 };
 
 
