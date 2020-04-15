@@ -23,13 +23,13 @@ Character.prototype.attackEnemyWeapon = function(enemy, item) {
   }
 };
 
-// Character.prototype.attackEnemyPower = function(enemy, power) { 
-//   if(enemy.weakness === power.type) {
-//     enemy.health -= ((power.strength * 2) + this.strength);
-//   } else {
-//     enemy.health -= (power.strength + this.strength);
-//   } 
-// };
+Character.prototype.attackEnemyPower = function(enemy, power) { 
+  // if(enemy.weakness === power.type) {
+  //   enemy.health -= ((power.strength * 2) + this.strength);
+  // } else {
+  //   enemy.health -= (power.strength + this.strength);
+  // } 
+};
 
 
 export function Item(itemName, itemEffect, itemStrength) {

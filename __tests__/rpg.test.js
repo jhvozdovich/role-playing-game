@@ -21,18 +21,6 @@ describe ("Pick Up Item", () => {
   });
 });
 
-describe ("Attack Enemy - Weapon", () => {
-  test("should reduce health of enemy with the character's strength plus the weapon's damage", () => {
-    let jessica = new Character ("Jessica", "Wizard", "Magic Missle");
-    let sword = new Item ("sword", "damage", 5);
-    let goblin = new Enemy("goblin", 11, "fire");
-    jessica.pickUpItem(sword);
-    jessica.attackEnemyWeapon(goblin, sword);
-    expect(goblin.health).toEqual(1);
-  });
-});
-
-
 describe('Item', () => {
   test('should create an item object with name and effect', () => {
     let item = new Item("Sword", "Damage", 5);
@@ -59,6 +47,29 @@ describe('Enemy', () => {
     expect(goblin.weakness).toEqual("fire");
   });
 });
+
+describe ("Attack Enemy - Weapon", () => {
+  test("should reduce health of enemy with the character's strength plus the weapon's damage", () => {
+    let jessica = new Character ("Jessica", "Wizard", "Magic Missle");
+    let sword = new Item ("sword", "damage", 5);
+    let goblin = new Enemy("goblin", 11, "fire");
+    jessica.pickUpItem(sword);
+    jessica.attackEnemyWeapon(goblin, sword);
+    expect(goblin.health).toEqual(1);
+  });
+});
+
+
+describe('attachEnemyPower', () => {
+  test("should reduce health of enemy with the character's strengh plus the powers strenght", () => {
+    let joseph = new Character("Joseph", "Jester", "Jest");
+    let fireball = new Power ("fireball", 2, "scorch")
+    let king = new Enemy ("king", 10, "insurrection")
+    joseph.attackEnemyPower(king, fireball);
+    expect(king.health).toEqual(3);
+  });
+});
+
 
 
 
