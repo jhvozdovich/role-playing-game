@@ -60,13 +60,23 @@ describe ("Attack Enemy - Weapon", () => {
 });
 
 
-describe('attachEnemyPower', () => {
+describe('attackEnemyPower', () => {
   test("should reduce health of enemy with the character's strengh plus the powers strenght", () => {
     let joseph = new Character("Joseph", "Jester", "Jest");
     let fireball = new Power ("fireball", 2, "scorch");
     let king = new Enemy ("king", 10, "insurrection");
     joseph.attackEnemyPower(king, fireball);
     expect(king.health).toEqual(3);
+  });
+});
+
+describe('attackEnemyPower-double damage', () => {
+  test("should reduce health of enemy with the character's strengh plus the powers strength multiplied by 2", () => {
+    let jessica = new Character ("Jessica", "Wizard", "Magic Missle");
+    let magicMissle = new Power ("magic missle", 5, "fire");
+    let zombie = new Enemy("zombie", 30, "fire");
+    jessica.attackEnemyPower(zombie, magicMissle);
+    expect(zombie.health).toEqual(15);
   });
 });
 
