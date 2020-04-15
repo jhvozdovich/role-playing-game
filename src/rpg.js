@@ -8,8 +8,8 @@ export function Character(userName, userClass, userPower) {
 }
 
 export function Item(itemName, itemEffect) {
-  // this.name = itemName;
-  // this.effect = itemEffect;
+  this.name = itemName;
+  this.effect = itemEffect;
 }
 
 // export function Power(namePower, damagePower) {

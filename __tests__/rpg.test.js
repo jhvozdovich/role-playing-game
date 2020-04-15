@@ -13,7 +13,7 @@ describe ('Character', () => {
 
 describe('Item', () => {
   test('should create an item object with name and effect', () => {
-    let item = new Item("Sword", "Shield");
+    let item = new Item("Sword", "Damage");
     expect(item.name).toEqual("Sword");
     expect(item.effect).toEqual("Damage");
   }); 
