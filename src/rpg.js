@@ -8,11 +8,11 @@ export function Character(userName, userClass, userPower) {
 }
 
 Character.prototype.pickUpItem = function(item) {
-  // if(this.inventory.length <= 5) {
-  //   this.inventory.push(item);
-  // } else {
-  //   console.log("You have too many items! Drop one!");
-  // }
+  if(this.inventory.length <= 5) {
+    this.inventory.push(item);
+  } else {
+    console.log("You have too many items! Drop one!");
+  }
 };
 
 export function Item(itemName, itemEffect) {
