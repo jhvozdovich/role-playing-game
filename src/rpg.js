@@ -7,7 +7,7 @@ export function Character(userName, userClass, userPower) {
   this.level = 1;
 }
 
-Character.prototype.pickUpItem = function() {
+Character.prototype.pickUpItem = function(item) {
   // if(this.inventory.length <= 5) {
   //   this.inventory.push(item);
   // } else {

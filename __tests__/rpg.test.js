@@ -11,14 +11,14 @@ describe ('Character', () => {
   });
 });
 
-// describe ("Pick Up Item", () => {
-//   test("should add a new item to the inventory if a player is holding less than five items", () => {
-//     let jessica = new Character ("Jessica", "Wizard", "Magic Missle");
-//     let sword = new Item ("Sword", "Damage");
-//     jessica.pickUpItem(sword);
-//     expect(jessica.inventory).toEqual([sword]);
-//   });
-// });
+describe ("Pick Up Item", () => {
+  test("should add a new item to the inventory if a player is holding less than five items", () => {
+    let jessica = new Character ("Jessica", "Wizard", "Magic Missle");
+    let sword = new Item ("Sword", "Damage");
+    jessica.pickUpItem(sword);
+    expect(jessica.inventory).toEqual([sword]);
+  });
+});
 
 describe('Item', () => {
   test('should create an item object with name and effect', () => {
