@@ -8,7 +8,7 @@ describe ('Character', () => {
     let character = new Character ("Jessica", "Wizard", "Magic Missle");
     expect(character.name).toEqual("Jessica");
     expect(character.class).toEqual("Wizard");
-    expect(character.power).toEqual(["Magic Missle"]);
+    expect(character.powersArray).toEqual(["Magic Missle"]);
   });
 });
 
@@ -80,6 +80,14 @@ describe('attackEnemyPower-double damage', () => {
   });
 });
 
+describe ("Add Power", () => {
+  test("should add a new power item if the player is holding less than three power items", () => {
+    let cyborg = new Character ("Cyborg", "Borg", "Zapping");
+    let explode = new Item ("explode", 10, "fire");
+    cyborg.addPower(explode);
+    expect(cyborg.powersArray).toEqual(["Zapping", explode]);
+  });
+});
 
 
 
